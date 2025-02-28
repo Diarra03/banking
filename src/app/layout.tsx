@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
+// Déclaration correcte des polices
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -46,3 +47,4 @@ export default function RootLayout({
     </html>
   );
 }
+
