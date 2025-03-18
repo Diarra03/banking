@@ -23,7 +23,8 @@ const config: Config = {
         fill: {
           '1': 'rgba(255, 255, 255, 0.10)'
         },
-        bankGradient: '#0179FE',
+        bankGradient: '#D4AF37', 
+
         indigo: {
           '500': '#6172F3',
           '700': '#3538CD'
@@ -110,9 +111,10 @@ const config: Config = {
         }
       },
       backgroundImage: {
-        'bank-gradient': 'linear-gradient(90deg, #0179FE 0%, #4893FF 100%)',
-        'gradient-mesh': 'url("/icons/gradient-mesh.svg")',  // Fixing the quotes here
+        'bank-gradient': 'linear-gradient(90deg, #000000 0%, #FFD700 100%)',
+        'gradient-mesh': 'url("/icons/gold.jpg")',  
         'bank-green-gradient': 'linear-gradient(90deg, #01797A 0%, #489399 100%)'
+
       },
       boxShadow: {
         form: '0px 1px 2px 0px rgba(16, 24, 40, 0.05)',

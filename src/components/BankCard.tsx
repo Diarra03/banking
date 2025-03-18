@@ -3,18 +3,18 @@ import React from 'react'
 import Image from 'next/image'
 import { formatAmount } from '../../lib/utils'
 
-const BankCard = ({accounts, userName, showBalance = true}: CreditCardProps) => {
+const BankCard = ({account, userName, showBalance = true}: CreditCardProps) => {
   return (
     <div className="flex flex-col ">
         <Link href="/" className="bank-card">
         <div className="bank-card_content">
             <div>
                 <h1 className="text-16 font-semibold text-white">
-                    {accounts.name || userName}
+                    {userName}
 
                 </h1>
                 <p className="font-ibm-plex-serif font-black text-white">
-                    {formatAmount(accounts.currentBalance)}
+                    {formatAmount(account.currentBalance)}
 
                 </p>
             </div>

@@ -15,6 +15,7 @@ import Link from 'next/link'
 import { cn } from '@/lib/utils'
 import { sidebarLinks } from '../../constants'
 import { usePathname } from 'next/navigation'
+import Footer from './Footer'
 
 const MobileNav = ({ user }: MobileNavProps) => {
     const pathname = usePathname();
@@ -33,15 +34,14 @@ const MobileNav = ({ user }: MobileNavProps) => {
                 <SheetContent side="left" className="border-none bg-white">
                     <Link href="/" className="cursor-pointer flex items-center gap-1 px-4">
                         <Image 
-                            src="/icons/logo.svg"   
-                            width={34}
-                            height={34}
-                            alt="Horizon logo" 
+                            src="/icons/gold-logo.jpg"   
+                            width={40}
+                            height={40}
+                            alt="ECO logo" 
                         />
-                        <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">Horizon</h1>
+                        <h1 className="text-26 font-ibm-plex-serif font-bold text-black-1">ECO</h1>
                     </Link>
                     <div className="mobilenav-sheet">
-                        {/* Maintenant, SheetClose est correctement placé autour des liens */}
                         <nav className="flex h-full flex-col gap-6 pt-16 text-white">
                             {sidebarLinks.map((item) => {
                                 const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`);
@@ -53,7 +53,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                                             className={cn('w-full', { 'bg-bank-gradient': isActive })}
                                         >
                                             <Image
-                                                src={item.imgURL} // Assurez-vous que 'item.imgURL' est valide
+                                                src={item.imgURL} 
                                                 alt={item.label}
                                                 width={20}
                                                 height={20}
@@ -73,7 +73,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
                             })}
                             USER
                         </nav>
-                        FOOTER
+                        <Footer user={user} type="mobile"/>
                     </div>
                 </SheetContent>
             </Sheet>

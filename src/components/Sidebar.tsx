@@ -6,22 +6,23 @@ import Image from 'next/image';
 import { sidebarLinks } from '../../constants';
 import { cn } from '../../lib/utils';
 import { usePathname } from 'next/navigation';
+import Footer from './Footer';
 
-const Sidebar = ({ user }: SidebarProps) => {
+const Sidebar = ({ user }: SiderbarProps) => {
   const pathname = usePathname();
 
   return (
-    <section className="sidebar"> {/* Correction de 'sidebaré' à 'sidebar' */}
+    <section className="sidebar"> 
       <nav className="flex flex-col gap-4">
         <Link href="/" className="mb-12 cursor-pointer flex items-center gap-2">
           <Image 
-            src="/icons/logo.svg"   // Vérifie que ce chemin est correct
-            width={34}
-            height={34}
-            alt="Horizon logo"
-            className="size-[24px] max-xl:size-14"  // Correction de la syntaxe de la classe
+            src="/icons/gold-logo.jpg"   
+            width={50}
+            height={50}
+            alt="ECO logo"
+            className="size-[24px] max-xl:size-14"  
           />
-          <h1 className="sidebar-logo">Horizon</h1>
+          <h1 className="sidebar-logo">ECO</h1>
         </Link>
 
         {sidebarLinks.map((item) => {
@@ -35,7 +36,7 @@ const Sidebar = ({ user }: SidebarProps) => {
             >
               <div className="relative size-6">
                 <Image 
-                  src={item.imgURL}  // Assurez-vous que 'item.imgURL' est valide
+                  src={item.imgURL}  
                   alt={item.label}
                   fill
                   className={cn({
@@ -54,7 +55,7 @@ const Sidebar = ({ user }: SidebarProps) => {
         USER
       </nav>
 
-      FOOTER
+      <Footer user={user} />
     </section>
   );
 };

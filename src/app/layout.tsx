@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// Déclaration correcte des polices
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -25,10 +24,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Horizon",
-  description: "Horizon est une plateforme bancaire moderne pour tout le monde",
+  title: "ECO",
+  description: "ECO est une plateforme bancaire moderne pour tout le monde",
   icons: {
-    icon: "/icons/logo.svg",
+    icon: "/icons/gold-logo.jpg",
   },
 };
 

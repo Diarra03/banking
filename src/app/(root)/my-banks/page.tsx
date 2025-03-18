@@ -1,9 +1,9 @@
 import React from 'react'
 
-const MyBanks = () => {
+const MesBanques = () => {
   return (
-    <div>MyBanks</div>
+    <div>MesBanques</div>
   )
 }
 
-export default MyBanks
+export default MesBanques
